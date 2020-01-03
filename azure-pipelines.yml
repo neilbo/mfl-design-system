@@ -20,6 +20,6 @@ steps:
     # npm install
     # ng build --prod
     npm install -g ionic
-    npm install
-    ionic build --prod
+    npm install
+    ionic build --prod
   displayName: 'npm install and build'
