@@ -1,0 +1,64 @@
+/* typography */
+@font-face {
+  font-family: "SF Compact Display";
+  src: url("/assets/fonts/sf-compact-display/sf-compact-display-regular.otf");
+}
+@font-face {
+  font-family: "SF Compact Display";
+  src: url("/assets/fonts/sf-compact-display/sf-compact-display-thin.otf");
+}
+@font-face {
+  font-family: "SF Compact Display";
+  src: url("/assets/fonts/sf-compact-display/sf-compact-display-medium.otf");
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+div,
+span,
+p {
+  &.title {
+    font-size: var(--font-title-size);
+    font-weight: 400;
+    &.thin {
+      font-weight: 200;
+    }
+    &.medium {
+      font-weight: 600;
+    }
+  }
+  &.subtitle {
+    font-size: var(--font-subtitle-size);
+    font-weight: 400;
+    &.thin {
+      font-weight: 200;
+    }
+    &.medium {
+      font-weight: 600;
+    }
+  }
+  &.body {
+    font-size: var(--font-body-size);
+    font-weight: 400;
+    &.thin {
+      font-weight: 200;
+    }
+    &.medium {
+      font-weight: 600;
+    }
+  }
+  &.label {
+    font-size: var(--font-label-size);
+    font-weight: 400;
+    &.thin {
+      font-weight: 200;
+    }
+    &.medium {
+      font-weight: 600;
+    }
+  }
+}

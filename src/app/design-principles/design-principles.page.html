@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      {{title}}
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <h3>{{subTitle}}</h3>
+  <ion-row>
+    <ion-col
+      size="12"
+      size-sm="6"
+      size-md="4"
+      *ngFor="let p of designPrinciples"
+    >
+      <ion-card>
+        <ion-card-header>
+          <img [src]="p.img" />
+          <ion-card-title>{{p.title}}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          {{p.message}}
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+</ion-content>

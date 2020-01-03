@@ -16,7 +16,7 @@
 @import "~@ionic/angular/css/normalize.css";
 @import "~@ionic/angular/css/structure.css";
 @import "~@ionic/angular/css/typography.css";
-@import '~@ionic/angular/css/display.css';
+@import "~@ionic/angular/css/display.css";
 
 /* Optional CSS utils that can be commented out */
 @import "~@ionic/angular/css/padding.css";
@@ -24,3 +24,256 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+/* Custom MFL Styling*/
+
+@import "./theme/mixins.scss";
+@import "./theme/typography.scss";
+/* Endless Rotation: Chrome | Safari */
+
+ion-content {
+  --background: var(--ion-color-light);
+}
+ion-fab-button {
+  --background: var(--color-white);
+  fa-icon,
+  ion-icon {
+    color: var(--ion-color-primary-on-white);
+  }
+}
+form {
+  ion-item {
+    --background: var(--ion-color-light);
+    --border-color: var(--ion-color-light);
+    margin-right: 4px;
+  }
+}
+ion-chip {
+  fa-icon {
+    margin: 0 var(--spacing-base) 0 0;
+  }
+  &.ion-chip-white {
+    background: var(--color-white);
+    &.available {
+      border: 1px var(--ion-color-primary-on-light) solid;
+      color: var(--ion-color-primary-on-light);
+    }
+    &.booked {
+      border: 1px var(--ion-color-info-on-light) solid;
+      color: var(--ion-color-info-on-light);
+    }
+    &.absent {
+      border: 1px var(--ion-color-warning-on-light) solid;
+      color: var(--ion-color-warning-on-light);
+    }
+  }
+  &.ion-chip-light {
+    background: var(--ion-color-light);
+    &.available {
+      border: 1px var(--ion-color-primary-on-light) solid;
+      color: var(--ion-color-primary-on-light);
+    }
+    &.booked {
+      border: 1px var(--ion-color-info-on-light) solid;
+      color: var(--ion-color-info-on-light);
+    }
+    &.absent {
+      border: 1px var(--ion-color-warning-on-light) solid;
+      color: var(--ion-color-warning-on-light);
+    }
+  }
+  &.ion-chip-light--no-border {
+    background: var(--ion-color-light);
+    border: 1px var(--ion-color-light) solid;
+    &.available {
+      color: var(--ion-color-primary-on-light);
+    }
+    &.booked {
+      color: var(--ion-color-info-on-light);
+    }
+    &.absent {
+      color: var(--ion-color-warning-on-light);
+    }
+  }
+  &.ion-chip-white--no-border {
+    background: var(--color-white);
+    border: 1px var(--color-white) solid;
+    &.available {
+      color: var(--ion-color-primary-on-light);
+    }
+    &.booked {
+      color: var(--ion-color-info-on-light);
+    }
+    &.absent {
+      color: var(--ion-color-warning-on-light);
+    }
+  }
+  &.ion-chip-variation-text {
+    &.available {
+      background: var(--ion-color-primary);
+      border: 1px var(--ion-color-primary) solid;
+      color: var(--ion-color-primary-variation-text);
+    }
+    &.booked {
+      background: var(--ion-color-info);
+      border: 1px var(--ion-color-info) solid;
+      color: var(--ion-color-info-variation-text);
+    }
+    &.absent {
+      background: var(--ion-color-warning);
+      border: 1px var(--ion-color-warning) solid;
+      color: var(--ion-color-warning-variation-text);
+    }
+  }
+  &.ion-chip-white-text {
+    color: var(--color-white);
+    &.available {
+      background: var(--ion-color-white-on-primary);
+      border: 1px var(--ion-color-white-on-primary) solid;
+    }
+    &.booked {
+      background: var(--ion-color-white-on-info);
+      border: 1px var(--ion-color-white-on-info) solid;
+    }
+    &.absent {
+      background: var(--ion-color-white-on-warning);
+      border: 1px var(--ion-color-white-on-warning) solid;
+    }
+  }
+}
+
+@mixin white-on-primary {
+  color: var(--color-white);
+  background-color: var(--ion-color-primary-on-white);
+}
+
+@mixin primary-on-white {
+  color: var(--ion-color-white-on-primary);
+  background-color: var(--color-white);
+}
+
+@mixin white-on-accent {
+  color: var(--color-white);
+  background-color: var(--ion-color-accent-on-white);
+}
+
+@mixin default-button-size {
+  padding: var(--spacing-md) var(--radius-large);
+  font-size: var(--font-subtitle-size);
+  border-radius: var(--radius-large);
+}
+@mixin medium-button-size {
+  padding: var(--spacing-base) var(--radius-medium);
+  font-size: var(--font-label-size);
+  border-radius: var(--radius-medium);
+}
+
+@mixin shadow-default($a, $b, $c, $d, $opacity) {
+  -webkit-box-shadow: $a $b $c $d rgba(0, 0, 0, $opacity);
+  -moz-box-shadow: $a $b $c $d rgba(0, 0, 0, $opacity);
+  box-shadow: $a $b $c $d rgba(0, 0, 0, $opacity);
+}
+
+button {
+  @include default-button-size();
+  margin: 0 var(--spacing-md) 0 0;
+  &.button--medium {
+    @include medium-button-size();
+  }
+  &.button--primary {
+    @include white-on-primary();
+    border: 1px solid var(--ion-color-primary-on-white);
+  }
+  &.button--secondary {
+    @include primary-on-white();
+    border: 1px solid var(--ion-color-primary-on-white);
+  }
+  &.button--tertiary {
+    color: var(--ion-color-primary-on-light);
+    background-color: transparent;
+    border: 1px solid transparent;
+  }
+  &.button--accent {
+    @include white-on-accent();
+    border: 1px solid var(--ion-color-white-on-accent);
+  }
+
+  @mixin session-action-button($color) {
+    background: var(--ion-color-white);
+    border-radius: var(--radius-base);
+    padding: var(--spacing-base);
+    min-width: 80px;
+    @include shadow-default(1px, 1px, 3px, 0px, 0.5);
+    color: $color;
+    border: 1px solid $color;
+    fa-icon {
+      display: block;
+    }
+    font-size: var(--font-body-size);
+    span {
+      display: block;
+    }
+  }
+  &.button--book-session {
+    @include session-action-button(var(--ion-color-primary-on-light));
+  }
+  &.button--mark-absent-session {
+    @include session-action-button(var(--ion-color-info-on-light));
+  }
+  &.button--cancel-session {
+    @include session-action-button(var(--ion-color-info-on-light));
+  }
+  &.button--contact-centre-session {
+    @include session-action-button(var(--ion-color-warning-on-light));
+  }
+}
+
+@mixin spin-on-hover() {
+  overflow: hidden;
+  transition-duration: 0.8s;
+  transition-property: transform;
+  &:hover {
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@mixin alert($title-color, $subtitle-color) {
+  .alert-title {
+    margin-top: var(--spacing-lg);
+    color: $title-color;
+  }
+  .alert-sub-title {
+    color: var(--ion-color-dark);
+  }
+  .alert-message {
+    img.icon {
+      position: absolute;
+      top: var(--spacing-base);
+      left: 50%;
+      height: var(--spacing-lg);
+      margin-left: calc(calc(var(--spacing-lg)/2) * -1); // inner calc func divides height by 2; outer calc func makes the result a negative value;
+      @include spin-on-hover();
+    }
+  }
+}
+
+.alert-success {
+  @include alert(var(--ion-color-primary), var(--ion-color-primary-on-white));
+}
+.alert-info {
+  @include alert(var(--ion-color-info), var(--ion-color-info-on-white));
+}
+.alert-warning {
+  @include alert(var(--ion-color-warning), var(--ion-color-warning-on-white));
+}
+.alert-error {
+  @include alert(var(--ion-color-danger), var(--ion-color-danger-on-white));
+}
+
+ion-toast {
+  --background: var(--ion-color-medium);
+  --color: var(--color-white);
+  --border-radius: var(--radius-base);
+  --button-color: var(--color-white);
+}

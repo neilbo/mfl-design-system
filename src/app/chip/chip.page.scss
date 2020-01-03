@@ -1,0 +1,93 @@
+ion-chip {
+  fa-icon {
+    margin: 0 var(--spacing-base) 0 0;
+  }
+  &.ion-chip-white {
+    background: #ffffff;
+    &.available {
+      border: 1px var(--ion-color-primary-on-light) solid;
+      color: var(--ion-color-primary-on-light);
+    }
+    &.booked {
+      border: 1px var(--ion-color-info-on-light) solid;
+      color: var(--ion-color-info-on-light);
+    }
+    &.absent {
+      border: 1px var(--ion-color-warning-on-light) solid;
+      color: var(--ion-color-warning-on-light);
+    }
+  }
+  &.ion-chip-light {
+    background: var(--ion-color-light);
+    &.available {
+      border: 1px var(--ion-color-primary-on-light) solid;
+      color: var(--ion-color-primary-on-light);
+    }
+    &.booked {
+      border: 1px var(--ion-color-info-on-light) solid;
+      color: var(--ion-color-info-on-light);
+    }
+    &.absent {
+      border: 1px var(--ion-color-warning-on-light) solid;
+      color: var(--ion-color-warning-on-light);
+    }
+  }
+  &.ion-chip-light--no-border {
+    background: var(--ion-color-light);
+    border: 1px var(--ion-color-light) solid;
+    &.available {
+      color: var(--ion-color-primary-on-light);
+    }
+    &.booked {
+      color: var(--ion-color-info-on-light);
+    }
+    &.absent {
+      color: var(--ion-color-warning-on-light);
+    }
+  }
+  &.ion-chip-white--no-border {
+    background: #ffffff;
+    border: 1px #ffffff solid;
+    &.available {
+      color: var(--ion-color-primary-on-light);
+    }
+    &.booked {
+      color: var(--ion-color-info-on-light);
+    }
+    &.absent {
+      color: var(--ion-color-warning-on-light);
+    }
+  }
+  &.ion-chip-variation-text {
+    &.available {
+      background: var(--ion-color-primary);
+      border: 1px var(--ion-color-primary) solid;
+      color: var(--ion-color-primary-variation-text);
+    }
+    &.booked {
+      background: var(--ion-color-info);
+      border: 1px var(--ion-color-info) solid;
+      color: var(--ion-color-info-variation-text);
+    }
+    &.absent {
+      background: var(--ion-color-warning);
+      border: 1px var(--ion-color-warning) solid;
+      color: var(--ion-color-warning-variation-text);
+    }
+  }
+  &.ion-chip-white-text {
+    color: #ffffff;
+    &.available {
+      background: var(--ion-color-white-on-primary);
+      border: 1px var(--ion-color-white-on-primary) solid;
+    }
+    &.booked {
+      background: var(--ion-color-white-on-info);
+      border: 1px var(--ion-color-white-on-info) solid;
+    }
+    &.absent {
+      background: var(--ion-color-white-on-warning);
+      border: 1px var(--ion-color-white-on-warning) solid;
+    }
+  }
+}

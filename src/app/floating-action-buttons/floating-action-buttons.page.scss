@@ -1,0 +1,15 @@
+ion-card {
+  text-align: center;
+  ion-card-content {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+ion-fab-button {
+  &.fab--add-accent {
+    fa-icon {
+      color: #ffffff;
+    }
+  }
+}

@@ -1,0 +1,152 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      {{title}}
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <h3>Product Palette</h3>
+  <ion-row>
+    <ion-col size="12" size-sm="6" size-md="2" *ngFor="let c of brand">
+      <ion-card [color]="c.name">
+        <ion-card-header>
+          <ion-card-subtitle>{{c.name | titlecase}}</ion-card-subtitle>
+          <ion-card-title>{{c.hex}}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          {{c?.description}}
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+  <!--  -->
+  <h3>Base Palette</h3>
+  <ion-row>
+    <ion-col size="12" size-sm="6" size-md="2" *ngFor="let c of base">
+      <ion-card [color]="c.name">
+        <ion-card-header>
+          <ion-card-subtitle>{{c.name | titlecase}}</ion-card-subtitle>
+          <ion-card-title>{{c.hex}}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          {{c?.description}}
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+  <h3>Colour Pairing</h3>
+  <h4>Tools</h4>
+  <p>
+    <a
+      href="https://learnui.design/tools/accessible-color-generator.html?colors=47b75b,ff9700,db3832,4f007d,2f6ca0,000000,707070,bec0c2,e0e0e0,ffffff,f4f4f4,e6cf01,ffee00"
+      target="_blank"
+    >
+      Accessible Color Generator by Learn UI Design
+    </a>
+  </p>
+  <p>
+    <a href="https://webaim.org/resources/contrastchecker/" target="_blank">
+      Web AIM contrast checker
+    </a>
+  </p>
+  <h4>Primary</h4>
+  <ion-row>
+    <ion-col size="12" size-sm="6" size-md="3" *ngFor="let c of primary">
+      <ion-card class="colour-pair">
+        <ion-card-header>
+          <ion-card-subtitle>{{c.description | titlecase}}</ion-card-subtitle>
+          <ion-card-title>{{c.hex}}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content [class]="c.className">
+          <p>Background: {{c.bgHex}}</p>
+          <p>Text: {{c.foregroundHex}}</p>
+          <div class="background">
+            <div class="foreground">{{c.name}}</div>
+          </div>
+          <p></p>
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+  <h4>Accent</h4>
+  <ion-row>
+    <ion-col size="12" size-sm="6" size-md="3" *ngFor="let c of accent">
+      <ion-card class="colour-pair">
+        <ion-card-header>
+          <ion-card-subtitle>{{c.description | titlecase}}</ion-card-subtitle>
+          <ion-card-title>{{c.hex}}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content [class]="c.className">
+          <p>Background: {{c.bgHex}}</p>
+          <p>Text: {{c.foregroundHex}}</p>
+          <div class="background">
+            <div class="foreground">{{c.name}}</div>
+          </div>
+          <p></p>
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+  <h4>Info</h4>
+  <ion-row>
+    <ion-col size="12" size-sm="6" size-md="3" *ngFor="let c of info">
+      <ion-card class="colour-pair">
+        <ion-card-header>
+          <ion-card-subtitle>{{c.description | titlecase}}</ion-card-subtitle>
+          <ion-card-title>{{c.hex}}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content [class]="c.className">
+          <p>Background: {{c.bgHex}}</p>
+          <p>Text: {{c.foregroundHex}}</p>
+          <div class="background">
+            <div class="foreground">{{c.name}}</div>
+          </div>
+          <p></p>
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+  <h4>Warning</h4>
+  <ion-row>
+    <ion-col size="12" size-sm="6" size-md="3" *ngFor="let c of warning">
+      <ion-card class="colour-pair">
+        <ion-card-header>
+          <ion-card-subtitle>{{c.description | titlecase}}</ion-card-subtitle>
+          <ion-card-title>{{c.hex}}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content [class]="c.className">
+          <p>Background: {{c.bgHex}}</p>
+          <p>Text: {{c.foregroundHex}}</p>
+          <div class="background">
+            <div class="foreground">{{c.name}}</div>
+          </div>
+          <p></p>
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+  <h4>Danger</h4>
+  <ion-row>
+    <ion-col size="12" size-sm="6" size-md="3" *ngFor="let c of danger">
+      <ion-card class="colour-pair">
+        <ion-card-header>
+          <ion-card-subtitle>{{c.description | titlecase}}</ion-card-subtitle>
+          <ion-card-title>{{c.hex}}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content [class]="c.className">
+          <p>Background: {{c.bgHex}}</p>
+          <p>Text: {{c.foregroundHex}}</p>
+          <div class="background">
+            <div class="foreground">{{c.name}}</div>
+          </div>
+          <p></p>
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+</ion-content>

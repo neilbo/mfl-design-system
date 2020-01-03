@@ -1,0 +1,56 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      {{title}}
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <button class="button--primary">Primary</button>
+        <button class="button--secondary">Secondary</button>
+        <button class="button--tertiary">Tertiary</button>
+        <button class="button--accent">Accent</button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <button class="button--primary button--medium">Primary</button>
+        <button class="button--secondary button--medium">Secondary</button>
+        <button class="button--tertiary button--medium">Tertiary</button>
+        <button class="button--accent button--medium">Accent</button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <h3>Sessions Actions</h3>
+        <button class="button--book-session button--medium">
+          <fa-icon [icon]="['fas', 'calendar-check']"></fa-icon>
+          <span>Book</span>
+          <span>Session</span>
+        </button>
+        <button class="button--cancel-session button--medium">
+          <fa-icon [icon]="['fas', 'calendar-times']"></fa-icon>
+          <span>Cancel</span>
+          <span>Session</span>
+        </button>
+        <button class="button--mark-absent-session button--medium">
+          <fa-icon [icon]="['fas', 'user-slash']"></fa-icon>
+          <span>Mark</span>
+          <span>Absent</span>
+        </button>
+        <button class="button--contact-centre-session button--medium">
+          <fa-icon [icon]="['fas', 'address-book']"></fa-icon>
+          <span>Contact</span>
+          <span>Centre</span>
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

@@ -1,0 +1,28 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>
+        {{title}}
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+<ion-content class="ion-padding">
+  <h2>{{subtitle}}</h2>
+  <ion-row>
+    <ion-col size="12" size-sm="6" size-md="6" *ngFor="let p of principles">
+      <ion-card>
+        <ion-card-header>
+          <img [src]="p.img" />
+          <ion-card-title>{{p.title}}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          {{p.message}}
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+  <small>~ Brand Guidelines 11 Feb 2019</small>
+</ion-content>

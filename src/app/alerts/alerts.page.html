@@ -1,0 +1,110 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      {{title}}
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding">
+  <h2>Alerts are primarily used for Errors. Currently the My Family Lounge app does not support Toasts so there is a current affordance to use a Success Alert in the meantime.</h2>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12" size-md="4" offset-md="4">
+        <button
+          (click)="presentBasicAlert()"
+          class="button--secondary button--medium"
+        >
+          presentBasicAlert
+        </button>
+      </ion-col>
+      <ion-col size="12" size-md="4" offset-md="4" *ngFor="let a of authorisationData">
+          <button
+            (click)="presentAuthorisationAlert(a)"
+            class="button--secondary button--medium"
+          >
+            {{a.label}}
+          </button>
+        </ion-col>
+      <ion-col size="12" size-md="4" offset-md="4">
+        <button
+          (click)="presentInfoAlert()"
+          class="button--secondary button--medium"
+        >
+          presentInfoAlert
+        </button>
+      </ion-col>
+      <ion-col size="12" size-md="4" offset-md="4">
+        <button
+          (click)="presentSuccessAlert()"
+          class="button--secondary button--medium"
+        >
+          Poor man's Toast
+        </button>
+      </ion-col>
+      <ion-col size="12" size-md="4" offset-md="4">
+        <button
+          (click)="presentWarningAlert()"
+          class="button--secondary button--medium"
+        >
+          presentWarningAlert
+        </button>
+      </ion-col>
+      <ion-col size="12" size-md="4" offset-md="4">
+        <button
+          (click)="presentErrorAlert()"
+          class="button--secondary button--medium"
+        >
+          presentErrorAlert
+        </button>
+      </ion-col>
+
+      <ion-col size="12" size-md="4" offset-md="4">
+        <button
+          (click)="presentAlertMultipleButtons()"
+          class="button--primary button--medium"
+        >
+          presentAlertMultipleButtons
+        </button>
+      </ion-col>
+
+      <ion-col size="12" size-md="4" offset-md="4">
+        <button
+          (click)="presentAlertConfirm()"
+          class="button--secondary button--medium"
+        >
+          presentAlertConfirm
+        </button>
+      </ion-col>
+
+      <ion-col size="12" size-md="4" offset-md="4">
+        <button
+          (click)="presentAlertPrompt()"
+          class="button--primary button--medium"
+        >
+          presentAlertPrompt
+        </button>
+      </ion-col>
+
+      <ion-col size="12" size-md="4" offset-md="4">
+        <button
+          (click)="presentAlertRadio()"
+          class="button--secondary button--medium"
+        >
+          presentAlertRadio
+        </button>
+      </ion-col>
+
+      <ion-col size="12" size-md="4" offset-md="4">
+        <button
+          (click)="presentAlertCheckbox()"
+          class="button--primary button--medium"
+        >
+          presentAlertCheckbox
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

@@ -1,0 +1,34 @@
+@mixin edit-icon-card {
+  .icon-container {
+    position: relative;
+    ion-fab-button {
+        position: absolute;
+        right: 0;
+      &:nth-child(1) {
+        top: 0;
+      }
+      &:nth-child(2) {
+        top: 5em;
+      }
+    }
+  }
+}
+
+ion-card {
+  background-color: #ffffff;
+  &.card--contact {
+    .body {
+      color: var(--ion-color-primary-on-white);
+    }
+    @include edit-icon-card();
+  }
+  &.card--payment-method {
+    .subtitle {
+      color: var(--ion-color-primary-on-white);
+    }
+    @include edit-icon-card();
+    .--align-right {
+      text-align: right;
+    }
+  }
+}

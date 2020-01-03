@@ -1,1 +1,19 @@
-
+ion-list.list--sessions {
+  ion-item {
+    div.border {
+      width: 4px;
+      height: 100%;
+      margin: 0 8px 0 0;
+      background: var(--ion-color-light);
+      &.available {
+        background: var(--ion-color-primary);
+      }
+      &.booked {
+        background: var(--ion-color-info);
+      }
+      &.absent {
+        background: var(--ion-color-warning);
+      }
+    }
+  }
+}

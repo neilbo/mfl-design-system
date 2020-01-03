@@ -1,0 +1,249 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      {{title}}
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <h3>Introduction</h3>
+  <p>
+    Icons visually represent actions, content and ideas in the MFL. Icons
+    increase scanability, and help users acclimate to patterns within the
+    product. Icons should not be used to solve a designer's problem of too
+    little space, or avoiding internationalization. Lest I sound like a broken
+    record, the first rule of icons is:
+    <strong>push yourself not to use icons</strong>.
+  </p>
+  <h3>Icon principles</h3>
+  <ion-row>
+    <ion-col
+      size="12"
+      size-sm="12"
+      size-md="4"
+      *ngFor="let p of iconPrinciples"
+    >
+      <ion-card>
+        <ion-card-header>
+          <img [src]="p.img" />
+          <ion-card-title>{{p.title}}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          {{p.message}}
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+
+  <h4>Icon guardrails</h4>
+  <p>
+    Use icons with a label wherever possible.
+  </p>
+  <p>
+    Don't use an icon in a way that is not aligned with its definition.
+  </p>
+  <p>
+    If you need a tooltip to explain the icon, you need a text label.
+  </p>
+  <p>
+    If you're using icons for scanability, use icons to codify one specific
+    thing.
+  </p>
+  <h4>Why are we using Font Awesome?</h4>
+  <p>
+    To be consistent with QIKKIDS NEXT, wherever possible use QIKKIDS as a guide
+    to not conflict icons.
+  </p>
+  <ion-grid>
+    <h3>Pages and Navigation</h3>
+    <ion-row>
+      <ion-col
+        size="6"
+        size-sm="4"
+        size-lg="2"
+        *ngFor="let icon of navigationIcons"
+      >
+        <ion-card>
+          <ion-card-header>
+            <ion-card-subtitle>
+              {{icon.name}}
+            </ion-card-subtitle>
+            <ion-card-title>
+              <fa-icon [icon]="icon.iconRef"></fa-icon>
+            </ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <p>{{icon.iconName}}</p>
+            <a target="_blank" [href]="icon.url">Font Awesome</a>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    <h3>Authorisations</h3>
+    <ion-row>
+      <ion-col
+        size="6"
+        size-sm="4"
+        size-lg="2"
+        *ngFor="let icon of authorisationIcons"
+      >
+        <ion-card>
+          <ion-card-header>
+            <ion-card-subtitle>
+              {{icon.name}}
+            </ion-card-subtitle>
+            <ion-card-title>
+              <fa-icon [icon]="icon.iconRef"></fa-icon>
+            </ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <p>{{icon.iconName}}</p>
+            <a target="_blank" [href]="icon.url">Font Awesome</a>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    <h3>Contact Methods</h3>
+    <ion-row>
+      <ion-col
+        size="6"
+        size-sm="4"
+        size-lg="2"
+        *ngFor="let icon of contactMethodIcons"
+      >
+        <ion-card>
+          <ion-card-header>
+            <ion-card-subtitle>
+              {{icon.name}}
+            </ion-card-subtitle>
+            <ion-card-title>
+              <fa-icon [icon]="icon.iconRef"></fa-icon>
+            </ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <p>{{icon.iconName}}</p>
+            <a target="_blank" [href]="icon.url">Font Awesome</a>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    <h3>Payment Methods</h3>
+    <ion-row>
+      <ion-col
+        size="6"
+        size-sm="4"
+        size-lg="2"
+        *ngFor="let icon of paymentMethodIcons"
+      >
+        <ion-card>
+          <ion-card-header>
+            <ion-card-subtitle>
+              {{icon.name}}
+            </ion-card-subtitle>
+            <ion-card-title>
+              <fa-icon [icon]="icon.iconRef"></fa-icon>
+            </ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <p>{{icon.iconName}}</p>
+            <a target="_blank" [href]="icon.url">Font Awesome</a>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    <h3>Message Status</h3>
+    <ion-row>
+      <ion-col
+        size="6"
+        size-sm="4"
+        size-lg="2"
+        *ngFor="let icon of errorStatusIcons"
+      >
+        <ion-card>
+          <ion-card-header>
+            <ion-card-subtitle>
+              {{icon.name}}
+            </ion-card-subtitle>
+            <ion-card-title>
+              <fa-icon [icon]="icon.iconRef"></fa-icon>
+            </ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <p>{{icon.iconName}}</p>
+            <a target="_blank" [href]="icon.url">Font Awesome</a>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    <h3>Session Status</h3>
+    <ion-row>
+      <ion-col
+        size="6"
+        size-sm="4"
+        size-lg="2"
+        *ngFor="let icon of bookingStatusIcons"
+      >
+        <ion-card>
+          <ion-card-header>
+            <ion-card-subtitle>
+              {{icon.name}}
+            </ion-card-subtitle>
+            <ion-card-title>
+              <fa-icon [icon]="icon.iconRef"></fa-icon>
+            </ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <p>{{icon.iconName}}</p>
+            <a target="_blank" [href]="icon.url">Font Awesome</a>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    <h3>CRUD</h3>
+    <ion-row>
+      <ion-col size="6" size-sm="4" size-lg="2" *ngFor="let icon of crudIcons">
+        <ion-card>
+          <ion-card-header>
+            <ion-card-subtitle>
+              {{icon.name}}
+            </ion-card-subtitle>
+            <ion-card-title>
+              <fa-icon [icon]="icon.iconRef"></fa-icon>
+            </ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <p>{{icon.iconName}}</p>
+            <a target="_blank" [href]="icon.url">Font Awesome</a>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    <h3>Utility Icons</h3>
+    <ion-row>
+      <ion-col size="6" size-sm="4" size-lg="2" *ngFor="let icon of utilityIcons">
+        <ion-card>
+          <ion-card-header>
+            <ion-card-subtitle>
+              {{icon.name}}
+            </ion-card-subtitle>
+            <ion-card-title>
+              <fa-icon [icon]="icon.iconRef"></fa-icon>
+            </ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <p>{{icon.iconName}}</p>
+            <a target="_blank" [href]="icon.url">Font Awesome</a>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <div>
+    <!-- <div class="pattern--available"></div> -->
+  </div>
+  <div></div>
+</ion-content>

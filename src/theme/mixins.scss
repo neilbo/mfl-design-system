@@ -1,0 +1,6 @@
+@mixin white-on-primary {
+  color: #ffffff;
+  background-color: var(--ion-color-primary-on-white);
+}
+// TODO Figure out why this isn't working
+
