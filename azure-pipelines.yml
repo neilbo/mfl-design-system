@@ -18,5 +18,5 @@ steps:
 - script: |
     node -v
     npm ci
-    npx ionic build --prod
+    npx @ionic/angular build --prod
   displayName: 'npm install ionic and build'
