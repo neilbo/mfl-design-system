@@ -26,10 +26,11 @@
 @import "~@ionic/angular/css/flex-utils.css";
 
 /* Custom MFL Styling*/
-
 @import "./theme/mixins.scss";
 @import "./theme/typography.scss";
-/* Endless Rotation: Chrome | Safari */
+
+/* PrismJS Syntax Highlighting */
+@import "~prismjs/themes/prism-okaidia.css";
 
 ion-content {
   --background: var(--ion-color-light);
