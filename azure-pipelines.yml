@@ -16,7 +16,7 @@ steps:
   displayName: 'Install Node.js'
 
 - script: |
-    node -v
     npm ci
+- script: |
     npx @ionic/angular build --prod
   displayName: 'npm install ionic and build'
