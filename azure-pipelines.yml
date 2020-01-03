@@ -16,12 +16,7 @@ steps:
   displayName: 'Install Node.js'
 
 - script: |
-    # npm install -g @angular/cli
-    # npm install
-    # ng build --prod
     node -v
-    which node
-    # npm install -g ionic
-    # npm install
-    # ionic build --prod
-  displayName: 'npm install and build'
+    npm ci
+    npx ionic build --prod
+  displayName: 'npm install ionic and build'
