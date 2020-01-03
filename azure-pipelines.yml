@@ -20,3 +20,8 @@ steps:
 - script: |
     npm run build-prod
   displayName: 'npm install ionic and build prod'
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: 'www'
+    ArtifactName: 'www'
+    publishLocation: 'Container'
