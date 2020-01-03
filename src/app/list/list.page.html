@@ -16,7 +16,7 @@
         <h3>Contacts</h3>
         <ion-list>
           <ion-item *ngFor="let contact of contacts" detail>
-            <ion-icon [name]="ion-chevron-right" slot="end"></ion-icon>
+            <ion-icon name="ion-chevron-right" slot="end"></ion-icon>
             <ion-label class="ion-text-wrap">
               <ion-text>
                 <h2 class="subtitle">{{contact.name}}</h2>
@@ -27,7 +27,10 @@
               <ion-text color="danger" *ngIf="contact.kioskStatus">
                 <p class="label">{{contact.kioskStatus }}</p>
               </ion-text>
-              <ion-text color="primary" *ngIf="!contact.type && !contact.kioskStatus">
+              <ion-text
+                color="primary"
+                *ngIf="!contact.type && !contact.kioskStatus"
+              >
                 <p class="label">&nbsp;</p>
               </ion-text>
             </ion-label>
@@ -37,7 +40,7 @@
         <h3>Family Centre Accounts</h3>
         <ion-list lines="inset">
           <ion-item *ngFor="let a of familyServiceAccounts" detail>
-            <ion-icon [name]="ion-chevron-right" slot="end"></ion-icon>
+            <ion-icon name="ion-chevron-right" slot="end"></ion-icon>
             <ion-label class="ion-text-wrap">
               <ion-text>
                 <h2 class="subtitle">{{a.familyName}}</h2>
@@ -50,7 +53,10 @@
         </ion-list>
         <h3>Sessions</h3>
         <ion-list class="list--sessions">
-          <ion-item *ngFor="let session of sessions" class="ion-no-margin ion-no-padding">
+          <ion-item
+            *ngFor="let session of sessions"
+            class="ion-no-margin ion-no-padding"
+          >
             <div
               class="border"
               [class.available]="isAvailable(session)"
@@ -59,7 +65,9 @@
             ></div>
             <ion-label class="ion-text-wrap">
               <ion-text>
-                <h2 class="subtitle">{{session.firstName}}&nbsp;({{session.rollName}})</h2>
+                <h2 class="subtitle">
+                  {{session.firstName}}&nbsp;({{session.rollName}})
+                </h2>
               </ion-text>
               <ion-chip
                 class="ion-chip-white-text available"
@@ -72,7 +80,7 @@
                 class="ion-chip-white-text booked"
                 *ngIf="isBooked(session)"
               >
-              <ion-label>Booked</ion-label>
+                <ion-label>Booked</ion-label>
               </ion-chip>
 
               <ion-chip
@@ -82,22 +90,34 @@
                 <ion-label>{{session.status | titlecase}}</ion-label>
               </ion-chip>
             </ion-label>
-            <button class="button--book-session button--medium" *ngIf="isAvailable(session)">
+            <button
+              class="button--book-session button--medium"
+              *ngIf="isAvailable(session)"
+            >
               <fa-icon [icon]="['fas', 'calendar-check']"></fa-icon>
               <span>Book</span>
               <span>Session</span>
             </button>
-            <button class="button--cancel-session button--medium" *ngIf="canCancel(session)">
+            <button
+              class="button--cancel-session button--medium"
+              *ngIf="canCancel(session)"
+            >
               <fa-icon [icon]="['fas', 'calendar-times']"></fa-icon>
               <span>Cancel</span>
               <span>Session</span>
             </button>
-            <button class="button--mark-absent-session button--medium" *ngIf="canMarkAbsent(session)">
+            <button
+              class="button--mark-absent-session button--medium"
+              *ngIf="canMarkAbsent(session)"
+            >
               <fa-icon [icon]="['fas', 'user-slash']"></fa-icon>
               <span>Mark</span>
               <span>Absent</span>
             </button>
-            <button class="button--contact-centre-session button--medium" *ngIf="isAbsent(session)">
+            <button
+              class="button--contact-centre-session button--medium"
+              *ngIf="isAbsent(session)"
+            >
               <fa-icon [icon]="['fas', 'address-book']"></fa-icon>
               <span>Contact</span>
               <span>Centre</span>
