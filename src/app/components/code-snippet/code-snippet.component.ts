@@ -8,11 +8,10 @@ import { ToastService } from "src/app/toast.service";
 @Component({
   selector: "code-snippet",
   template: `
-    <div class="code-snippet-container">
+    <div class="code-snippet-container" (click)="clickToCopy()">
       <pre><code class="language-markup">{{snippet}}</code></pre>
       <button ion-button (click)="clickToCopy()" value="Click to copy" class="button-copy">
-        <ion-icon name="clipboard"></ion-icon>
-         Copy
+         Click anywhere to copy
       </button>
     </div>
   `,

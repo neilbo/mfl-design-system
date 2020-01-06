@@ -2,6 +2,9 @@
 
 div.code-snippet-container {
     position: relative;
+    &:hover {
+      cursor: pointer;
+    }
 }
 
 button.button-copy {
