@@ -87,6 +87,10 @@ const routes: Routes = [
     path: 'loading-spinner',
     loadChildren: () => import('./loading-spinner/loading-spinner.module').then( m => m.LoadingSpinnerPageModule)
   },
+  {
+    path: 'code-snippet',
+    loadChildren: () => import('./code-snippet/code-snippet.module').then( m => m.CodeSnippetPageModule)
+  },
 ];
 
 @NgModule({

@@ -4,9 +4,9 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { AboutPageRoutingModule } from './about-routing.module';
+import { CodeSnippetPageRoutingModule } from './code-snippet-routing.module';
 
-import { AboutPage } from './about.page';
+import { CodeSnippetPage } from './code-snippet.page';
 import { ComponentsModule } from '../components/compnenets.module';
 
 @NgModule({
@@ -14,9 +14,9 @@ import { ComponentsModule } from '../components/compnenets.module';
     CommonModule,
     FormsModule,
     IonicModule,
-    AboutPageRoutingModule,
+    CodeSnippetPageRoutingModule,
     ComponentsModule
   ],
-    declarations: [AboutPage]
+  declarations: [CodeSnippetPage]
 })
-export class AboutPageModule {}
+export class CodeSnippetPageModule {}
