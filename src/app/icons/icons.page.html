@@ -27,7 +27,7 @@
       size-md="4"
       *ngFor="let p of iconPrinciples"
     >
-      <ion-card class="card--icon" (click)="copyToClipboard(icon.iconName)">
+      <ion-card class="card--icon">
         <ion-card-header>
           <img [src]="p.img" />
           <ion-card-title>{{p.title}}</ion-card-title>
