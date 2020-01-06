@@ -1,12 +1,10 @@
+@import "../../theme/mixins.scss";
+
 ion-card {
   text-align: center;
   background: #ffffff;
   &.card--icon {
-    &:hover {
-      cursor: pointer;
-      transition: transform .3s ease-in-out;
-      transform: scale(1.1);
-    }
+    @include animate-on-hover();
   }
 }
 

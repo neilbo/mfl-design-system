@@ -30,7 +30,7 @@
   box-shadow: $a $b $c $d rgba(0, 0, 0, $opacity);
 }
 
-@mixin animate-on-hover {
+@mixin animate-on-hover() {
   &:hover {
     cursor: pointer;
     transition: transform .3s ease-in-out;
