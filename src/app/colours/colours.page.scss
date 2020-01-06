@@ -3,6 +3,14 @@
 // https://ionicframework.com/docs/theming/colors
 // https://ionicframework.com/docs/theming/color-generator
 
+.card--colour, .colour-pair{
+  &:hover {
+    cursor: pointer;
+    transition: transform .3s ease-in-out;
+    transform: scale(1.1);
+  }
+}
+
 @mixin colour-pair($foreground, $background, $name) {
   .colour-pair {
     background-color: white;
