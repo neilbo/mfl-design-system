@@ -1,6 +1,8 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, ViewChild } from "@angular/core";
 import copyToClipboard from "src/app/utils/copy-to-clipboard";
 import { ToastService } from "../toast.service";
+import { IonContent } from '@ionic/angular';
+import toggleScrollButton from '../utils/toggle-scroll-button';
 
 @Component({
   selector: "app-colours",
@@ -8,6 +10,8 @@ import { ToastService } from "../toast.service";
   styleUrls: ["./colours.page.scss"]
 })
 export class ColoursPage implements OnInit {
+  isScrollEnabled: boolean = false;
+  @ViewChild(IonContent, { static: true }) content: IonContent;
   title: string = "Colours";
   brand = [
     {
@@ -254,6 +258,14 @@ export class ColoursPage implements OnInit {
   copyColourPair(colour): void {
     const keyOfInterest: string = colour.clipboardColour;
     this.copyColour(colour[keyOfInterest]);
+  }
+
+  onScroll(event: CustomEvent) {
+    this.isScrollEnabled = toggleScrollButton(event)
+  }
+
+  scrollToTop() {
+    this.content.scrollToTop(300);
   }
 
   // https://webaim.org/resources/contrastchecker/
