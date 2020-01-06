@@ -1,0 +1,16 @@
+@import "../../../theme/mixins.scss";
+
+div.code-snippet-container {
+    position: relative;
+}
+
+button.button-copy {
+  background: lighten(#272822, 10%);
+  color: var(--color-white);
+  position: absolute;
+  margin: 0;
+  top: 0;
+  right: 0;
+  border-radius: var(--radius-base);
+  @include animate-on-hover();
+}

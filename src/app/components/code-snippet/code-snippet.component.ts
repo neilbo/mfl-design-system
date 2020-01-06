@@ -2,21 +2,20 @@ import { Component, OnInit, Input, Output, EventEmitter } from "@angular/core";
 import { ToastController } from "@ionic/angular";
 import Prism from "prismjs";
 import copyToClipboard from "src/app/utils/copy-to-clipboard";
-import { ToastService } from 'src/app/toast.service';
+import { ToastService } from "src/app/toast.service";
 // Custom Code Snippet component shared via ComponentsModule
 // How to use: import ComponentsModule to module.ts file of page i.e. icons.module.ts
 // Themed in global.scss @import "~prismjs/themes/prism-okaidia.css";
 @Component({
   selector: "code-snippet",
   template: `
-    <pre><code class="language-markup">{{snippet}}</code></pre>
-    <button
-      (click)="clickToCopy()"
-      value="Click to copy"
-      class="button--primary"
-    >
-      Copy
-    </button>
+    <div class="code-snippet-container">
+      <pre><code class="language-markup">{{snippet}}</code></pre>
+      <button (click)="clickToCopy()" value="Click to copy" class="button-copy">
+        Copy
+      </button>
+      <div></div>
+    </div>
   `,
   styleUrls: ["./code-snippet.component.scss"]
 })
