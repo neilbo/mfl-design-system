@@ -57,7 +57,7 @@ export class ToastService {
       message: `  <ion-icon name="copy"></ion-icon> Copied to Clipboard!`,
       duration: 2500,
       cssClass: "toast-default",
-      position: "middle"
+      position: this.position
     });
     toast.present();
   }
@@ -67,7 +67,7 @@ export class ToastService {
       message: `  <ion-icon name="copy"></ion-icon> Copied <strong>${value}</strong> to Clipboard!`,
       duration: 2500,
       cssClass: "toast-default",
-      position: "middle"
+      position: this.position
     });
     toast.present();
   }
