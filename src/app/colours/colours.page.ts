@@ -248,7 +248,7 @@ export class ColoursPage implements OnInit {
 
   copyColour(hexCode: string): void {
     copyToClipboard(hexCode);
-    this.toastService.presentCopiedColourToast(hexCode);
+    this.toastService.presentCopiedToastWithValue(hexCode);
   }
 
   copyColourPair(colour): void {

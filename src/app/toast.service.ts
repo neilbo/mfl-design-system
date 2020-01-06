@@ -62,9 +62,9 @@ export class ToastService {
     toast.present();
   }
 
-  async presentCopiedColourToast(colour: string): Promise<void> {
+  async presentCopiedToastWithValue(value: string): Promise<void> {
     const toast = await this.toastController.create({
-      message: `  <ion-icon name="copy"></ion-icon> Copied ${colour} to Clipboard!`,
+      message: `  <ion-icon name="copy"></ion-icon> Copied <strong>${value}</strong> to Clipboard!`,
       duration: 2500,
       cssClass: "toast-default",
       position: "middle"

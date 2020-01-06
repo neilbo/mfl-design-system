@@ -27,7 +27,7 @@
       size-md="4"
       *ngFor="let p of iconPrinciples"
     >
-      <ion-card>
+      <ion-card class="card--icon" (click)="copyToClipboard(icon.iconName)">
         <ion-card-header>
           <img [src]="p.img" />
           <ion-card-title>{{p.title}}</ion-card-title>
@@ -67,7 +67,7 @@
         size-lg="2"
         *ngFor="let icon of navigationIcons"
       >
-        <ion-card>
+        <ion-card class="card--icon" (click)="copyToClipboard(icon.iconName)">
           <ion-card-header>
             <ion-card-subtitle>
               {{icon.name}}
@@ -91,7 +91,7 @@
         size-lg="2"
         *ngFor="let icon of authorisationIcons"
       >
-        <ion-card>
+        <ion-card class="card--icon" (click)="copyToClipboard(icon.iconName)">
           <ion-card-header>
             <ion-card-subtitle>
               {{icon.name}}
@@ -115,7 +115,7 @@
         size-lg="2"
         *ngFor="let icon of contactMethodIcons"
       >
-        <ion-card>
+        <ion-card class="card--icon" (click)="copyToClipboard(icon.iconName)">
           <ion-card-header>
             <ion-card-subtitle>
               {{icon.name}}
@@ -139,7 +139,7 @@
         size-lg="2"
         *ngFor="let icon of paymentMethodIcons"
       >
-        <ion-card>
+        <ion-card class="card--icon" (click)="copyToClipboard(icon.iconName)">
           <ion-card-header>
             <ion-card-subtitle>
               {{icon.name}}
@@ -163,7 +163,7 @@
         size-lg="2"
         *ngFor="let icon of errorStatusIcons"
       >
-        <ion-card>
+        <ion-card class="card--icon" (click)="copyToClipboard(icon.iconName)">
           <ion-card-header>
             <ion-card-subtitle>
               {{icon.name}}
@@ -187,7 +187,7 @@
         size-lg="2"
         *ngFor="let icon of bookingStatusIcons"
       >
-        <ion-card>
+        <ion-card class="card--icon" (click)="copyToClipboard(icon.iconName)">
           <ion-card-header>
             <ion-card-subtitle>
               {{icon.name}}
@@ -206,7 +206,7 @@
     <h3>CRUD</h3>
     <ion-row>
       <ion-col size="6" size-sm="4" size-lg="2" *ngFor="let icon of crudIcons">
-        <ion-card>
+        <ion-card class="card--icon" (click)="copyToClipboard(icon.iconName)">
           <ion-card-header>
             <ion-card-subtitle>
               {{icon.name}}
@@ -225,7 +225,7 @@
     <h3>Utility Icons</h3>
     <ion-row>
       <ion-col size="6" size-sm="4" size-lg="2" *ngFor="let icon of utilityIcons">
-        <ion-card>
+        <ion-card class="card--icon" (click)="copyToClipboard(icon.iconName)">
           <ion-card-header>
             <ion-card-subtitle>
               {{icon.name}}

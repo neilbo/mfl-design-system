@@ -2,35 +2,10 @@
 // https://learnui.design/tools/accessible-color-generator.html?colors=47b75b,ff9700,db3832,4f007d,2f6ca0,000000,707070,bec0c2,e0e0e0,ffffff,f4f4f4,e6cf01,ffee00
 // https://ionicframework.com/docs/theming/colors
 // https://ionicframework.com/docs/theming/color-generator
+@import "../../theme/mixins";
 
 .card--colour, .colour-pair{
-  &:hover {
-    cursor: pointer;
-    transition: transform .3s ease-in-out;
-    transform: scale(1.1);
-  }
-}
-
-@mixin colour-pair($foreground, $background, $name) {
-  .colour-pair {
-    background-color: white;
-    .#{$name} {
-      font-size: 1.5em;
-      p {
-        margin: 8px 0;
-      }
-      .background {
-        padding: 24px;
-        background-color: $background;
-        border: 1px solid black;
-        .foreground {
-          padding: 0px;
-          text-align: center;
-          color: $foreground;
-        }
-      }
-    }
-  }
+  @include animate-on-hover();
 }
 
 /* primary */
@@ -77,5 +52,3 @@
 @include colour-pair(#ffffff, var(--ion-color-white-on-danger), "white-on-danger");
 
 @include colour-pair(var(--ion-color-danger-variation-text), var(--ion-color-danger), "variation-on-danger");
-
-

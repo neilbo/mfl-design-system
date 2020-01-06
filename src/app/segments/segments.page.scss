@@ -1,8 +1,4 @@
-@mixin shadow-default($a, $b, $c, $d, $opacity) {
-  -webkit-box-shadow: $a $b $c $d rgba(0, 0, 0, $opacity);
-  -moz-box-shadow: $a $b $c $d rgba(0, 0, 0, $opacity);
-  box-shadow: $a $b $c $d rgba(0, 0, 0, $opacity);
-}
+@import "../../theme/mixins";
 
 ion-segment {
   --border-color: transparent;
