@@ -1,5 +1,4 @@
 import { Component, OnInit, Input, Output, EventEmitter } from "@angular/core";
-import { ToastController } from "@ionic/angular";
 import Prism from "prismjs";
 import copyToClipboard from "src/app/utils/copy-to-clipboard";
 import { ToastService } from "src/app/toast.service";
@@ -11,10 +10,10 @@ import { ToastService } from "src/app/toast.service";
   template: `
     <div class="code-snippet-container">
       <pre><code class="language-markup">{{snippet}}</code></pre>
-      <button (click)="clickToCopy()" value="Click to copy" class="button-copy">
-        Copy
+      <button ion-button (click)="clickToCopy()" value="Click to copy" class="button-copy">
+        <ion-icon name="clipboard"></ion-icon>
+         Copy
       </button>
-      <div></div>
     </div>
   `,
   styleUrls: ["./code-snippet.component.scss"]
