@@ -46,5 +46,4 @@ export class CodeSnippetPage implements OnInit {
   copyToClipboard(event: Event) {
     console.info(`Copied text: ${event}`);
   }
-
 }
