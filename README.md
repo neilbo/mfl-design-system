@@ -22,7 +22,11 @@ Install Dependencies and Packages
 ```
 npm ci
 ```
-Serve the project (Usually on http://localhost:4200/)
+Serve the project (Usually on http://localhost:8100/)
 ```
-npm run start
+npx ionic serve
+```
+Generate Components, Services, Modules, Classes, Directives, Guards
+```
+npx ionic generate
 ```
