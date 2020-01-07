@@ -9,30 +9,21 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content class="ion-padding">
-  <!-- <ion-grid>
-    <ion-row>
-      <ion-col size="sadf12" size-md="6" size-lg="3">
-        <ion-card>
-          <ion-card-header>
-            <ion-card-title><span class="title">Title</span></ion-card-title>
-          </ion-card-header>
-          <ion-card-content>
-            <p class="body">
-              Content. We are Groot. I am Groot. We are Groot. We are Groot. We
-              are Groot. I am Groot. I am Groot. I am Groot. I am Groot. I am
-              Groot. I am Groot. I am Groot. We are Groot. We are Groot. I am
-              Groot. We are Groot. I am Groot. We are Groot. I am Groot. We are
-              Groot. We are Groot. We are Groot. We are Groot. I am Groot. I am
-              Groot. We are Groot. We are Groot. We are Groot. We are Groot. I
-              am Groot. We are Groot. I am Groot. I am Groot. We are Groot. I am
-              Groot.
-            </p>
-          </ion-card-content>
-        </ion-card>
-      </ion-col>
-    </ion-row>
-  </ion-grid> -->
+<ion-content
+  class="ion-padding"
+  [scrollEvents]="true"
+  (ionScroll)="onScroll($event)"
+>
+  <ion-fab
+    vertical="bottom"
+    horizontal="center"
+    slot="fixed"
+    *ngIf="isScrollEnabled"
+  >
+    <ion-fab-button (click)="scrollToTop()">
+      <ion-icon name="arrow-round-up"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
   <ion-grid>
     <h3>Centre</h3>
     <ion-row>
@@ -389,80 +380,80 @@
     </ion-row>
   </ion-grid>
   <ion-grid>
-      <h3>Balance Card</h3>
-      <ion-row>
-        <ion-col size="12" size-md="4">
-          <ion-card class="card--payment-method ">
-            <ion-card-content>
-              <ion-grid>
-                <ion-row>
-                  <ion-col size="12">
-                    <p class="label">
-                      Label
-                    </p>
-                    <p class="subtitle">
-                      Subtitle
-                    </p>
-                  </ion-col>
-                </ion-row>
-                <ion-row>
-                  <ion-col size-md="9">
-                    <p class="label">
-                      Label
-                    </p>
-                    <p class="subtitle">
-                      Subtitle
-                    </p>
-                  </ion-col>
-                  <ion-col size="3">
-                    <p class="label">
-                      Label
-                    </p>
-                    <p class="subtitle">
-                      Subtitle
-                    </p>
-                  </ion-col>
-                </ion-row>
-              </ion-grid>
-            </ion-card-content>
-          </ion-card>
-        </ion-col>
-        <ion-col size="12" size-md="4">
-          <ion-card class="card--payment-method ">
-            <ion-card-content>
-              <ion-grid>
-                <ion-row>
-                  <ion-col size="12">
-                    <p class="label">
-                      Current Balance
-                    </p>
-                    <p class="subtitle">
-                      -$400.00
-                    </p>
-                  </ion-col>
-                </ion-row>
-                <ion-row>
-                  <ion-col size="6">
-                    <p class="label">
-                      Next Payment Amount
-                    </p>
-                    <p class="subtitle">
-                      $1000
-                    </p>
-                  </ion-col>
-                  <ion-col size="6">
-                    <p class="label">
-                      Next Payment Due 
-                    </p> 
-                    <p class="subtitle">
-                      05/05/2023
-                    </p>
-                  </ion-col>
-                </ion-row>
-              </ion-grid>
-            </ion-card-content>
-          </ion-card>
-        </ion-col>
-      </ion-row>
-    </ion-grid>
+    <h3>Balance Card</h3>
+    <ion-row>
+      <ion-col size="12" size-md="4">
+        <ion-card class="card--payment-method ">
+          <ion-card-content>
+            <ion-grid>
+              <ion-row>
+                <ion-col size="12">
+                  <p class="label">
+                    Label
+                  </p>
+                  <p class="subtitle">
+                    Subtitle
+                  </p>
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col size-md="9">
+                  <p class="label">
+                    Label
+                  </p>
+                  <p class="subtitle">
+                    Subtitle
+                  </p>
+                </ion-col>
+                <ion-col size="3">
+                  <p class="label">
+                    Label
+                  </p>
+                  <p class="subtitle">
+                    Subtitle
+                  </p>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col size="12" size-md="4">
+        <ion-card class="card--payment-method ">
+          <ion-card-content>
+            <ion-grid>
+              <ion-row>
+                <ion-col size="12">
+                  <p class="label">
+                    Current Balance
+                  </p>
+                  <p class="subtitle">
+                    -$400.00
+                  </p>
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col size="6">
+                  <p class="label">
+                    Next Payment Amount
+                  </p>
+                  <p class="subtitle">
+                    $1000
+                  </p>
+                </ion-col>
+                <ion-col size="6">
+                  <p class="label">
+                    Next Payment Due
+                  </p>
+                  <p class="subtitle">
+                    05/05/2023
+                  </p>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>

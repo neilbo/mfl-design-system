@@ -8,8 +8,21 @@
     </ion-title>
   </ion-toolbar>
 </ion-header>
-
-<ion-content class="ion-padding">
+<ion-content
+  class="ion-padding"
+  [scrollEvents]="true"
+  (ionScroll)="onScroll($event)"
+>
+  <ion-fab
+    vertical="bottom"
+    horizontal="center"
+    slot="fixed"
+    *ngIf="isScrollEnabled"
+  >
+    <ion-fab-button (click)="scrollToTop()">
+      <ion-icon name="arrow-round-up"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
   <h3>
     Chips, sometimes called tags, are useful for displaying keywords or
     categories from common sets of data.
@@ -114,26 +127,26 @@
   </div>
 
   <div>
-      <h3>Legend</h3>
-  
-      <ion-chip class="ion-chip-light--no-border available">
-        <fa-icon [icon]="['fas', 'circle']"></fa-icon>
-        <!-- <ion-icon name="heart" color="warning"></ion-icon> -->
-        <ion-label>Available</ion-label>
-      </ion-chip>
-  
-      <ion-chip class="ion-chip-light--no-border booked">
-        <fa-icon [icon]="['fas', 'circle']"></fa-icon>
-        <!-- <ion-icon name="heart" color="warning"></ion-icon> -->
-        <ion-label>Booked</ion-label>
-      </ion-chip>
-  
-      <ion-chip class="ion-chip-light--no-border absent">
-        <fa-icon [icon]="['fas', 'circle']"></fa-icon>
-        <!-- <ion-icon name="heart" color="warning"></ion-icon> -->
-        <ion-label>Absent</ion-label>
-      </ion-chip>
-    </div>
+    <h3>Legend</h3>
+
+    <ion-chip class="ion-chip-light--no-border available">
+      <fa-icon [icon]="['fas', 'circle']"></fa-icon>
+      <!-- <ion-icon name="heart" color="warning"></ion-icon> -->
+      <ion-label>Available</ion-label>
+    </ion-chip>
+
+    <ion-chip class="ion-chip-light--no-border booked">
+      <fa-icon [icon]="['fas', 'circle']"></fa-icon>
+      <!-- <ion-icon name="heart" color="warning"></ion-icon> -->
+      <ion-label>Booked</ion-label>
+    </ion-chip>
+
+    <ion-chip class="ion-chip-light--no-border absent">
+      <fa-icon [icon]="['fas', 'circle']"></fa-icon>
+      <!-- <ion-icon name="heart" color="warning"></ion-icon> -->
+      <ion-label>Absent</ion-label>
+    </ion-chip>
+  </div>
 
   <!-- 
   <ion-chip color="light">

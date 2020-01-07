@@ -16,11 +16,10 @@ export class AboutPage implements OnInit {
   ngOnInit() {}
 
   onScroll(event: CustomEvent) {
-    this.isScrollEnabled = toggleScrollButton(event)
+    this.isScrollEnabled = toggleScrollButton(event);
   }
 
   scrollToTop() {
     this.content.scrollToTop(300);
   }
-
 }

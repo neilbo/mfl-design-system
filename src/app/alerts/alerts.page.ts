@@ -1,5 +1,7 @@
-import { Component, OnInit } from "@angular/core";
-import { AlertController } from '@ionic/angular';
+import { Component, OnInit, ViewChild } from "@angular/core";
+import { IonContent } from "@ionic/angular";
+import toggleScrollButton from "../utils/toggle-scroll-button";
+import { AlertController } from "@ionic/angular";
 
 @Component({
   selector: "app-alerts",
@@ -7,36 +9,37 @@ import { AlertController } from '@ionic/angular';
   styleUrls: ["./alerts.page.scss"]
 })
 export class AlertsPage implements OnInit {
+  isScrollEnabled: boolean = false;
+  @ViewChild(IonContent, { static: true }) content: IonContent;
   title: string = "Alerts";
   authorisationData: Array<any> = [
     { label: "Collection", filename: "car-solid" },
     { label: "Excursion", filename: "bus-solid" },
     { label: "Medical", filename: "medkit-solid" },
-    { label: "Emergency", filename: "ambulance-solid" },
+    { label: "Emergency", filename: "ambulance-solid" }
   ];
   constructor(public alertController: AlertController) {}
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   async presentBasicAlert() {
     const alert = await this.alertController.create({
       header: `I am a Header`,
       subHeader: `I am a Message`,
-      buttons: ["OK"],
+      buttons: ["OK"]
     });
 
     await alert.present();
   }
 
   async presentAuthorisationAlert(authObject) {
-      const alert = await this.alertController.create({
-        header: `${authObject.label}`,
-        subHeader: `Explainer about ${authObject.label}`,
-        message: `<img class="icon icon-success rotate" src="./assets/images/icons/${authObject.filename}.svg">`,
-        buttons: ["Close"],
-        cssClass: 'alert-success'
-      });
-      await alert.present();
+    const alert = await this.alertController.create({
+      header: `${authObject.label}`,
+      subHeader: `Explainer about ${authObject.label}`,
+      message: `<img class="icon icon-success rotate" src="./assets/images/icons/${authObject.filename}.svg">`,
+      buttons: ["Close"],
+      cssClass: "alert-success"
+    });
+    await alert.present();
   }
 
   async presentErrorAlert() {
@@ -45,7 +48,7 @@ export class AlertsPage implements OnInit {
       subHeader: `I am a Message`,
       message: `<img class="icon icon-warning rotate" src="./assets/images/icons/exclamation-circle-solid.svg">`,
       buttons: ["OK"],
-      cssClass: 'alert-error'
+      cssClass: "alert-error"
     });
 
     await alert.present();
@@ -56,7 +59,7 @@ export class AlertsPage implements OnInit {
       subHeader: `I am a Message`,
       message: `<img class="icon icon-warning rotate" src="./assets/images/icons/exclamation-triangle-solid.svg">`,
       buttons: ["OK"],
-      cssClass: 'alert-warning'
+      cssClass: "alert-warning"
     });
 
     await alert.present();
@@ -67,7 +70,7 @@ export class AlertsPage implements OnInit {
       subHeader: `I am a Message`,
       message: `<img class="icon icon-warning" src="./assets/images/icons/check-circle-solid.svg">`,
       buttons: ["OK"],
-      cssClass: 'alert-success'
+      cssClass: "alert-success"
     });
 
     await alert.present();
@@ -79,7 +82,7 @@ export class AlertsPage implements OnInit {
       subHeader: `I am a Message`,
       message: `<img class="icon icon-warning" src="./assets/images/icons/info-circle-solid.svg">`,
       buttons: ["OK"],
-      cssClass: 'alert-info'
+      cssClass: "alert-info"
     });
 
     await alert.present();
@@ -320,4 +323,11 @@ export class AlertsPage implements OnInit {
     await alert.present();
   }
 
+  onScroll(event: CustomEvent) {
+    this.isScrollEnabled = toggleScrollButton(event);
+  }
+
+  scrollToTop() {
+    this.content.scrollToTop(300);
+  }
 }

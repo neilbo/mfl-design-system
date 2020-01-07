@@ -9,7 +9,21 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content
+  class="ion-padding"
+  [scrollEvents]="true"
+  (ionScroll)="onScroll($event)"
+>
+  <ion-fab
+    vertical="bottom"
+    horizontal="center"
+    slot="fixed"
+    *ngIf="isScrollEnabled"
+  >
+    <ion-fab-button (click)="scrollToTop()">
+      <ion-icon name="arrow-round-up"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
   <form>
     <ion-grid>
       <ion-row>
@@ -100,10 +114,7 @@
 
           <ion-item>
             <ion-label>Popover</ion-label>
-            <ion-select
-              interface="popover"
-              placeholder="Select One"
-            >
+            <ion-select interface="popover" placeholder="Select One">
               <ion-select-option value="brown">Brown</ion-select-option>
               <ion-select-option value="blonde">Blonde</ion-select-option>
               <ion-select-option value="black">Black</ion-select-option>
@@ -113,10 +124,7 @@
 
           <ion-item>
             <ion-label>Action Sheet</ion-label>
-            <ion-select
-              interface="action-sheet"
-              placeholder="Select One"
-            >
+            <ion-select interface="action-sheet" placeholder="Select One">
               <ion-select-option value="red">Red</ion-select-option>
               <ion-select-option value="purple">Purple</ion-select-option>
               <ion-select-option value="yellow">Yellow</ion-select-option>

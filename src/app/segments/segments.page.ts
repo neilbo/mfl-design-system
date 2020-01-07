@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from "@angular/core";
+import { IonContent } from "@ionic/angular";
+import toggleScrollButton from "../utils/toggle-scroll-button";
 
 @Component({
   selector: 'app-segments',
@@ -6,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./segments.page.scss'],
 })
 export class SegmentsPage implements OnInit {
+  isScrollEnabled: boolean = false;
+  @ViewChild(IonContent, { static: true }) content: IonContent;
   title: string = 'Segments';
   constructor() { }
 
@@ -14,5 +18,11 @@ export class SegmentsPage implements OnInit {
   segmentChanged(ev: any) {
     console.log('Segment changed', ev);
   }
+  onScroll(event: CustomEvent) {
+    this.isScrollEnabled = toggleScrollButton(event);
+  }
 
+  scrollToTop() {
+    this.content.scrollToTop(300);
+  }
 }

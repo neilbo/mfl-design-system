@@ -15,7 +15,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'
     FormsModule,
     IonicModule,
     IconsPageRoutingModule,
-    FontAwesomeModule
+    FontAwesomeModule,
   ],
   declarations: [IconsPage]
 })

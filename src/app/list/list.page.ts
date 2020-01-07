@@ -1,4 +1,6 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, ViewChild } from "@angular/core";
+import { IonContent } from "@ionic/angular";
+import toggleScrollButton from "../utils/toggle-scroll-button";
 import composeStatusLabel, { SessionStatus, Session } from "../models/session"
 
 @Component({
@@ -8,6 +10,8 @@ import composeStatusLabel, { SessionStatus, Session } from "../models/session"
 })
 
 export class ListPage implements OnInit {
+  isScrollEnabled: boolean = false;
+  @ViewChild(IonContent, { static: true }) content: IonContent;
   title: string = "List";
   private selectedItem: any;
   private icons = [
@@ -108,6 +112,13 @@ export class ListPage implements OnInit {
 
   statusLabel(session: Session): string {
     return composeStatusLabel(session);
+  }
+  onScroll(event: CustomEvent) {
+    this.isScrollEnabled = toggleScrollButton(event);
+  }
+
+  scrollToTop() {
+    this.content.scrollToTop(300);
   }
   // add back when alpha.4 is out
   // navigate(item) {

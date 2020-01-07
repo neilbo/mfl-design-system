@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from "@angular/core";
+import { IonContent } from "@ionic/angular";
+import toggleScrollButton from "../utils/toggle-scroll-button";
 import { LoadingController } from '@ionic/angular';
 @Component({
   selector: 'app-loading-spinner',
@@ -6,6 +8,8 @@ import { LoadingController } from '@ionic/angular';
   styleUrls: ['./loading-spinner.page.scss'],
 })
 export class LoadingSpinnerPage implements OnInit {
+  isScrollEnabled: boolean = false;
+  @ViewChild(IonContent, { static: true }) content: IonContent;
   title: string = 'Loading Spinner';
   constructor(public loadingController: LoadingController) {}
 
@@ -57,6 +61,13 @@ export class LoadingSpinnerPage implements OnInit {
   }
 
   ngOnInit() {
+  }
+  onScroll(event: CustomEvent) {
+    this.isScrollEnabled = toggleScrollButton(event);
+  }
+
+  scrollToTop() {
+    this.content.scrollToTop(300);
   }
 
 }

@@ -9,7 +9,21 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content
+  class="ion-padding"
+  [scrollEvents]="true"
+  (ionScroll)="onScroll($event)"
+>
+  <ion-fab
+    vertical="bottom"
+    horizontal="center"
+    slot="fixed"
+    *ngIf="isScrollEnabled"
+  >
+    <ion-fab-button (click)="scrollToTop()">
+      <ion-icon name="arrow-round-up"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
   <ion-grid>
     <ion-row>
       <ion-col size="10" offset="1" size-md="8" offset-md="2">
@@ -27,7 +41,7 @@
       </ion-col>
     </ion-row>
     <ion-row>
-        <ion-col size="10" offset="1" size-md="8" offset-md="2">
+      <ion-col size="10" offset="1" size-md="8" offset-md="2">
         <ion-segment (ionChange)="segmentChanged($event)" value="statements">
           <ion-segment-button value="statements">
             <ion-label>Statements</ion-label>

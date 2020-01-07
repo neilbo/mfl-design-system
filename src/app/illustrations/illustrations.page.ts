@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { Principle } from '../models/principle';
+import { Component, OnInit, ViewChild } from "@angular/core";
+import { IonContent } from "@ionic/angular";
+import toggleScrollButton from "../utils/toggle-scroll-button";
 
 @Component({
   selector: 'app-illustrations',
@@ -8,6 +9,8 @@ import { Principle } from '../models/principle';
 })
 export class IllustrationsPage implements OnInit {
   title: string = 'Illustrations';
+  isScrollEnabled: boolean = false;
+  @ViewChild(IonContent, { static: true }) content: IonContent;
   exampleImages = [
     { src: `/assets/images/dsm-mfl-illustrations/add a centre.png`},
     { src: `/assets/images/dsm-mfl-illustrations/add another centre.png`},
@@ -54,5 +57,11 @@ export class IllustrationsPage implements OnInit {
 
   ngOnInit() {
   }
+  onScroll(event: CustomEvent) {
+    this.isScrollEnabled = toggleScrollButton(event);
+  }
 
+  scrollToTop() {
+    this.content.scrollToTop(300);
+  }
 }

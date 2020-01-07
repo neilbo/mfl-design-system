@@ -1,14 +1,19 @@
-import { Component, OnInit } from '@angular/core';
-import { Principle } from '../models/principle';
+import { Component, OnInit, ViewChild } from "@angular/core";
+import { IonContent } from "@ionic/angular";
+import toggleScrollButton from "../utils/toggle-scroll-button";
+import { Principle } from "../models/principle";
 
 @Component({
-  selector: 'app-design-principles',
-  templateUrl: './design-principles.page.html',
-  styleUrls: ['./design-principles.page.scss'],
+  selector: "app-design-principles",
+  templateUrl: "./design-principles.page.html",
+  styleUrls: ["./design-principles.page.scss"]
 })
 export class DesignPrinciplesPage implements OnInit {
-  title: string = 'Design Principles';
-  subTitle: string = 'Principles for creating great experience for our customers';
+  isScrollEnabled: boolean = false;
+  @ViewChild(IonContent, { static: true }) content: IonContent;
+  title: string = "Design Principles";
+  subTitle: string =
+    "Principles for creating great experience for our customers";
   designPrinciples: Principle[] = [
     {
       title: `ONLY WHAT I NEED, WHEN I NEED IT`,
@@ -50,14 +55,16 @@ export class DesignPrinciplesPage implements OnInit {
       complicated and technical jargon. When unavoidable, provide
       resources to explain what things are.`,
       img: `/assets/images/undraw_back_to_school_inwc.svg`
-    },
-  ]
-  constructor() {
+    }
+  ];
+  constructor() {}
 
-
-   }
-
-  ngOnInit() {
+  ngOnInit() {}
+  onScroll(event: CustomEvent) {
+    this.isScrollEnabled = toggleScrollButton(event);
   }
 
+  scrollToTop() {
+    this.content.scrollToTop(300);
+  }
 }

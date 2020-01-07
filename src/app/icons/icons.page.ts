@@ -1,8 +1,9 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, ViewChild } from "@angular/core";
+import { IonContent } from "@ionic/angular";
+import toggleScrollButton from "../utils/toggle-scroll-button";
 import { Principle } from "../models/principle";
 import composeIconList, {
   IconItem,
-  IconInterface,
   navigationIcons,
   crudIcons,
   bookingStatusIcons,
@@ -22,8 +23,9 @@ import copyToClipboard from "../utils/copy-to-clipboard";
   styleUrls: ["./icons.page.scss"]
 })
 export class IconsPage implements OnInit {
+  isScrollEnabled: boolean = false;
+  @ViewChild(IonContent, { static: true }) content: IonContent;
   title: string = "Icons";
-
   iconPrinciples: Principle[] = [
     {
       title: `ADDITIVE`,
@@ -64,6 +66,14 @@ export class IconsPage implements OnInit {
     this.bookingStatusIcons = composeIconList(bookingStatusIcons);
     this.crudIcons = composeIconList(crudIcons);
     this.utilityIcons = composeIconList(utilityIcons);
+  }
+
+  onScroll(event: CustomEvent) {
+    this.isScrollEnabled = toggleScrollButton(event);
+  }
+
+  scrollToTop() {
+    this.content.scrollToTop(300);
   }
 
   copyToClipboard(iconName: string) {

@@ -1,4 +1,6 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, ViewChild } from "@angular/core";
+import { IonContent } from "@ionic/angular";
+import toggleScrollButton from "../utils/toggle-scroll-button";
 import { ToastService } from "../toast.service";
 
 @Component({
@@ -7,6 +9,8 @@ import { ToastService } from "../toast.service";
   styleUrls: ["./toasts.page.scss"]
 })
 export class ToastsPage implements OnInit {
+  isScrollEnabled: boolean = false;
+  @ViewChild(IonContent, { static: true }) content: IonContent;
   title: string = "Toasts";
   description: string;
   constructor(public toastService: ToastService) {}
@@ -24,5 +28,12 @@ export class ToastsPage implements OnInit {
 
   presentToastWithOptions() {
     this.toastService.presentToastWithOptions();
+  }
+  onScroll(event: CustomEvent) {
+    this.isScrollEnabled = toggleScrollButton(event);
+  }
+
+  scrollToTop() {
+    this.content.scrollToTop(300);
   }
 }
