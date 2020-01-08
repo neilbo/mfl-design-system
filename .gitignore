@@ -92,3 +92,6 @@ npm-debug.log*
 /platforms
 /plugins
 /www
+
+# Local Netlify folder
+.netlify
