@@ -33,6 +33,12 @@ npx ionic generate
 ## Deployment
 * Currently getting deployed manually via Neil's Netlify account.
 
+```
+npx ionic build --prod
+```
+
+* Drag and drop **www** folder to Netlify
+
 * https://designsystem-mfl.netlify.com/
 
 
