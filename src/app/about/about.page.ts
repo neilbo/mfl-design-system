@@ -8,7 +8,7 @@ import toggleScrollButton from "../utils/toggle-scroll-button";
   styleUrls: ["./about.page.scss"]
 })
 export class AboutPage implements OnInit {
-  title: string = "Test";
+  title: string = "About";
   isScrollEnabled: boolean = false;
   @ViewChild(IonContent, { static: true }) content: IonContent;
   constructor() {}
