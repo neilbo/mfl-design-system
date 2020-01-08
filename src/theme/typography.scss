@@ -1,15 +1,23 @@
 /* typography */
 @font-face {
   font-family: "SF Compact Display";
-  src: url("/assets/fonts/sf-compact-display/sf-compact-display-regular.otf");
+  src: url("/assets/font/sf-compact-display/sf-compact-display-regular.otf");
 }
 @font-face {
   font-family: "SF Compact Display";
-  src: url("/assets/fonts/sf-compact-display/sf-compact-display-thin.otf");
+  src: url("/assets/font/sf-compact-display/sf-compact-display-thin.otf");
 }
 @font-face {
   font-family: "SF Compact Display";
-  src: url("/assets/fonts/sf-compact-display/sf-compact-display-medium.otf");
+  src: url("/assets/font/sf-compact-display/sf-compact-display-medium.otf");
+}
+
+:root,
+:root[mode=ios],
+:root[mode=md] {
+  --ion-font-family: "SF Compact Display", "", sans-serif !important;
+
+  font-family: "SF Compact Display", "Arial", sans-serif !important;
 }
 
 h1,
