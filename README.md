@@ -30,3 +30,10 @@ Generate Components, Services, Modules, Classes, Directives, Guards
 ```
 npx ionic generate
 ```
+## Deployment
+* Currently getting deployed manually via Neil's Netlify account.
+
+* https://designsystem-mfl.netlify.com/
+
+
+* Pending job with Infrastructure Team to host.
