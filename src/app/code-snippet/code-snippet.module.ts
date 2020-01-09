@@ -7,7 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { CodeSnippetPageRoutingModule } from './code-snippet-routing.module';
 
 import { CodeSnippetPage } from './code-snippet.page';
-import { ComponentsModule } from '../components/compnenets.module';
+import { ComponentsModule } from '../components/components.module';
 
 @NgModule({
   imports: [

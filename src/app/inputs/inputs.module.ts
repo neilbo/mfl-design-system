@@ -8,7 +8,7 @@ import { InputsPageRoutingModule } from './inputs-routing.module';
 
 import { InputsPage } from './inputs.page';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { ComponentsModule } from '../components/compnenets.module';
+import { ComponentsModule } from '../components/components.module';
 
 @NgModule({
   imports: [
