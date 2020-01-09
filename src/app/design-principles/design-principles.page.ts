@@ -17,23 +17,28 @@ export class DesignPrinciplesPage implements OnInit {
   designPrinciples: Principle[] = [
     {
       title: `ONLY WHAT I NEED, WHEN I NEED IT`,
-      message: `Don't overwhelm the user with options or information that
-      doesn't enable them to complete the task at hand. They should
-      be able to execute this quickly and easily in a logical way`,
+      message: `Show parents just enough information on every screen to complete the task at hand. 
+      Keep text short and concise, clear and to the point. 
+      Use visual hierarchy to highlight the most important information.
+      `,
       img: `/assets/images/undraw_note_list_etto.svg`
     },
     {
       title: `CONTINUALLY TEST AND LEARN FROM CUSTOMERS`,
-      message: `Don't overwhelm the user with options or information that
-      doesn't enable them to complete the task at hand. They should
-      be able to execute this quickly and easily in a logical way`,
+      message: `
+      Keep colors, components and interaction patterns consistent.
+    	Keep language consistent e.g Sign in on one page shouldn’t be Log in on another.
+	    Use icons and visual metaphors users already understand.
+      `,
       img: `/assets/images/undraw_mobile_testing_reah.svg`
     },
     {
       title: `DON’T MAKE ME THINK`,
-      message: `Even though CCSS and child care can be complex, the content should
-      be obvious at a glance and simple to understand and use. Language
-      should be easy to understand, layouts and flows logical and clear.`,
+      message: `
+      Use easy to understand language – 6th grade reading level.
+	    Keep actions per screen to a minimum.
+	    Use descriptive buttons and icons.
+      `,
       img: `/assets/images/undraw_questions_75e0.svg`
     },
     {
@@ -43,17 +48,10 @@ export class DesignPrinciplesPage implements OnInit {
       img: `/assets/images/undraw_posting_photo_v65l.svg`
     },
     {
-      title: `WORK FROM ANYWHERE`,
-      message: `Remember that our users work with children and aren't sitting
-      behind a computer all day. They should have the freedom to
-      access the system on different devices anywhere.`,
-      img: `/assets/images/undraw_relaxing_at_home_9tyc.svg`
-    },
-    {
       title: `SPEAK THE CUSTOMERS LANGUAGE`,
-      message: `We use domain terms and speak like our customers do. No
-      complicated and technical jargon. When unavoidable, provide
-      resources to explain what things are.`,
+      message: `Use terminology consistent with parent experience e.g. A Kindy not Kindergarten.
+      Be mindful of QK technical concepts e.g Permanent/ Casual booking vs a booking
+      `,
       img: `/assets/images/undraw_back_to_school_inwc.svg`
     }
   ];
