@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
@@ -8,6 +8,7 @@ import { InputsPageRoutingModule } from './inputs-routing.module';
 
 import { InputsPage } from './inputs.page';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { ComponentsModule } from '../components/compnenets.module';
 
 @NgModule({
   imports: [
@@ -15,7 +16,9 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     FormsModule,
     IonicModule,
     InputsPageRoutingModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    ReactiveFormsModule,
+    ComponentsModule
   ],
   declarations: [InputsPage]
 })

@@ -1,0 +1,7 @@
+.validation-error--inline {
+  margin: 0;
+  padding: 0;
+  span.label {
+    color: var(--ion-color-danger);
+  }
+}
