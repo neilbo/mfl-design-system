@@ -5,7 +5,7 @@ import { ValidationService } from "src/app/validation.service";
 @Component({
   selector: "validation-error",
   template: `
-    <ion-item *ngIf="errorMessage !== null" class="validation-error--inline">
+    <ion-item *ngIf="errorMessage !== null" class="validation-error">
       <span class="label">{{ errorMessage }}</span>
     </ion-item>
   `,

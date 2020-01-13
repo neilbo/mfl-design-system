@@ -1,14 +1,23 @@
 form {
   ion-item {
+    --padding-end: 0px;
+    --padding-start: 0px;
+    --inner-padding-end: 0px;
+    --inner-padding-start: 0px;
+    --background: var(--ion-color-light);
+    --border-color: var(--ion-color-light);
+    &.item-has-focus {
+      --background: var(--ion-color-light);
+    }
     &.item-checkbox-checked {
-        ion-label {
-            color: var(--ion-color-primary-on-white);
-        }
+      ion-label {
+        color: var(--ion-color-primary-on-white);
+      }
     }
     &.item-radio-checked {
-        ion-label {
-            color: var(--ion-color-primary-on-white);
-        }
+      ion-label {
+        color: var(--ion-color-primary-on-white);
+      }
     }
   }
   ion-input {
