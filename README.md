@@ -46,36 +46,46 @@ npx ionic build --prod
 
 ## How to install Git Credential Manager (GCM) on Mac
 [Git Credential Manager Mac](https://github.com/microsoft/Git-Credential-Manager-Core#download-and-install)
+
 1. Download installer
+
 ![download-installer](/readme-assets/readme--1-download-installer.png)
 
 2. Find link for GCM core for OSX
+
 ![find-gcmcore-osx](/readme-assets/readme--2-find-gcmcore-osx.png)
 
 3. Open package on your Mac
+
 ![find-package](/readme-assets/readme--3-find-package.png)
 
 4. Start Install Wizard
+
 ![install-wizard](/readme-assets/readme--4-install-wizard.png)
 ![install-wizard](/readme-assets/readme--5-install-wizard.png)
 ![install-wizard](/readme-assets/readme--6-install-wizard.png)
 
 5. Copy to clipboard git clone command from Azure Devops
+
 ![clone-repo-from-azure](/readme-assets/readme--7-clone-repo-from-azure.png)
 
 6. Paste into Terminal
+
 ![cli-git-clone](/readme-assets/readme--8-cli-git-clone.png)
 
 7. Authenticate to GCM using your Azure Devops credentials
+
 ![login-gcm](/readme-assets/readme--9-login-gcm.png)
 
 8. Complete DUO 2FA
+
 ![fa-duo](/readme-assets/readme--10-2fa-duo.png)
 
 9. Check the terminal for success
+
 ![success](/readme-assets/readme--11-success.png)
 
-10. cd into the Project
+10.  cd into the Project
 ```
 cd design-system
 ```
