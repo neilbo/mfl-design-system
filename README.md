@@ -6,7 +6,7 @@ This is static Website built with [Ionic](https://ionicframework.com/docs) (Angu
 ## Prerequisites
 - [Git Credential Manager Windows](https://github.com/microsoft/Git-Credential-Manager-for-Windows)
 - [Git Credential Manager Mac](https://github.com/microsoft/Git-Credential-Manager-Core#download-and-install)
-  - See [below](#how-to-install-git-credential-manager-(gcm)-on-mac)
+  - See [install instructions below](#how-to-install-git-credential-manager-(gcm)-on-mac) 👀👇
 - [NodeJS](https://nodejs.org/en/)
  
 ## Recommendations
