@@ -6,6 +6,7 @@ This is static Website built with [Ionic](https://ionicframework.com/docs) (Angu
 ## Prerequisites
 - [Git Credential Manager Windows](https://github.com/microsoft/Git-Credential-Manager-for-Windows)
 - [Git Credential Manager Mac](https://github.com/microsoft/Git-Credential-Manager-Core#download-and-install)
+  - See [below](#how-to-install-git-credential-manager-(gcm)-on-mac)
 - [NodeJS](https://nodejs.org/en/)
  
 ## Recommendations
@@ -59,7 +60,7 @@ npx ionic build --prod
 
 ![find-package](/readme-assets/readme--3-find-package.png)
 
-4. Start Install Wizard
+4. Start Install Wizard 
 
 ![install-wizard](/readme-assets/readme--4-install-wizard.png)
 ![install-wizard](/readme-assets/readme--5-install-wizard.png)
@@ -77,15 +78,15 @@ npx ionic build --prod
 
 ![login-gcm](/readme-assets/readme--9-login-gcm.png)
 
-8. Complete DUO 2FA
+8. Complete DUO 2FA 🗝
 
 ![fa-duo](/readme-assets/readme--10-2fa-duo.png)
 
-9. Check the terminal for success
+9. Check the terminal for success 🎉
 
 ![success](/readme-assets/readme--11-success.png)
 
-10.  cd into the Project
+10.  cd into the Project  🎤 👋
 ```
 cd design-system
 ```
