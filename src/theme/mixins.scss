@@ -134,3 +134,8 @@
   --inner-padding-end: 0px;
   --inner-padding-start: 0px;
 }
+
+@mixin smooth-scrolling() {
+  overflow-y: scroll; /* has to be scroll, not auto */
+  -webkit-overflow-scrolling: touch;
+}

@@ -34,6 +34,7 @@
 
 ion-content {
   --background: var(--ion-color-light);
+  @include smooth-scrolling();
 }
 ion-fab-button {
   --background: var(--color-white);
