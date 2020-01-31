@@ -59,6 +59,8 @@ export const errorStatusIcons: IconInterface[] = [
 
 export const utilityIcons: IconInterface[] = [
   { label: "go to top", preFix: "fas", iconName: "arrow-up" },
+  { label: "favourite checked", preFix: "fas", iconName: "heart" },
+  { label: "favourite unchecked", preFix: "far", iconName: "heart" },
 ];
 
 export const bookingStatusIcons: IconInterface[] = [
