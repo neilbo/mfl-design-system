@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import toggleScrollButton from "../utils/toggle-scroll-button";
+import { IonContent } from '@ionic/angular';
 
 @Component({
   selector: 'app-spacing',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SpacingPage implements OnInit {
   title: string = `Spacing`;
+  isScrollEnabled: boolean = false;
+  @ViewChild(IonContent, { static: true }) content: IonContent;
   constructor() { }
 
   ngOnInit() {
+  }
+  onScroll(event: CustomEvent) {
+    this.isScrollEnabled = toggleScrollButton(event);
+  }
+
+  scrollToTop() {
+    this.content.scrollToTop(300);
   }
 
 }
