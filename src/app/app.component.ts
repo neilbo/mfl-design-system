@@ -49,14 +49,19 @@ export class AppComponent {
       order: 7
     },
     {
+      title: "spacing",
+      url: "/spacing",
+      order: 7
+    },
+    {
       title: "Code Snippet Example",
       url: "/code-snippet",
-      order: 8
+      order: 9
     },
     {
       title: "voice and tone",
       url: "/voice-and-tone",
-      order: 9
+      order: 10
     },
   ];
   

@@ -1,0 +1,81 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      {{title}}
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content
+  class="ion-padding"
+  [scrollEvents]="true"
+  (ionScroll)="onScroll($event)"
+>
+  <ion-fab
+    vertical="bottom"
+    horizontal="center"
+    slot="fixed"
+    *ngIf="isScrollEnabled"
+  >
+    <ion-fab-button (click)="scrollToTop()">
+      <ion-icon name="arrow-round-up"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+  <div class="spacing-image">
+    <img src="/assets/images/undraw_to_the_moon_v1mv.svg" />
+    <h2>🎱 8 is the magic number</h2>
+  </div>
+  <!-- https://medium.com/@rayacevedo45/android-sp-vs-dp-ca50ad53162d -->
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12" size-md="4">
+        <ion-card>
+          <ion-card-header>
+            <h3>Web</h3>
+          </ion-card-header>
+          <ion-card-content>
+            <p class="title">spacing-sm: 4px</p>
+            <p class="title"><strong>spacing-base: 8px</strong></p>
+            <p class="title">spacing-md: 16px</p>
+            <p class="title">spacing-lg: 24px</p>
+            <p class="title">spacing-xl: 32px</p>
+            <p class="title">spacing-xxl: 40px</p>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col size="12" size-md="4">
+        <ion-card>
+          <ion-card-header>
+            <h3>iOS</h3>
+          </ion-card-header>
+          <ion-card-content>
+            <p class="title">spacing-sm: 4pt</p>
+            <p class="title"><strong>spacing-base: 8pt</strong></p>
+            <p class="title">spacing-md: 16pt</p>
+            <p class="title">spacing-lg: 24pt</p>
+            <p class="title">spacing-xl: 32pt</p>
+            <p class="title">spacing-xxl: 40pt</p>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col size="12" size-md="4">
+        <ion-card>
+          <ion-card-header>
+            <h3>Android</h3>
+          </ion-card-header>
+          <ion-card-content>
+            <p class="title">spacing-sm: 4dp</p>
+            <p class="title"><strong>spacing-base: 8dp</strong></p>
+            <p class="title">spacing-md: 16dp</p>
+            <p class="title">spacing-lg: 24dp</p>
+            <p class="title">spacing-xl: 32dp</p>
+            <p class="title">spacing-xxl: 40dp</p>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

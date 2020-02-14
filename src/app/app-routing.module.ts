@@ -91,6 +91,10 @@ const routes: Routes = [
     path: 'code-snippet',
     loadChildren: () => import('./code-snippet/code-snippet.module').then( m => m.CodeSnippetPageModule)
   },
+  {
+    path: 'spacing',
+    loadChildren: () => import('./spacing/spacing.module').then( m => m.SpacingPageModule)
+  },
 ];
 
 @NgModule({
