@@ -13,7 +13,7 @@ export interface IconItem {
 
 export const navigationIcons: IconInterface[] = [
   { label: "home", preFix: "fas", iconName: "home" },
-  { label: "sessions", preFix: "far", iconName: "calendar-alt" },
+  { label: "bookings", preFix: "far", iconName: "calendar-alt" },
   { label: "journeys", preFix: "fas", iconName: "book-open" },
   { label: "daily journals", preFix: "fas", iconName: "book" },
   { label: "images", preFix: "fas", iconName: "image" },
