@@ -118,6 +118,31 @@
         </ion-card>
       </ion-col>
     </ion-row>
+    <h3>Calendar</h3>
+    <ion-row>
+      <ion-col
+        size="12"
+        size-md="6"
+        size-lg="4"
+        size-xl="2"
+        *ngFor="let icon of calendarIcons"
+      >
+        <ion-card class="card--icon" (click)="copyToClipboard(icon.iconName)">
+          <ion-card-header>
+            <ion-card-subtitle>
+              {{icon.name}}
+            </ion-card-subtitle>
+            <ion-card-title>
+              <fa-icon [icon]="icon.iconRef"></fa-icon>
+            </ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <p>{{icon.iconName}}</p>
+            <a target="_blank" [href]="icon.url">Font Awesome</a>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
     <h3>Contact Methods</h3>
     <ion-row>
       <ion-col
